@@ -63,7 +63,9 @@
  * }
  */
 
-// ...
+const yelling = array => {
+  return array.map(word => word.toUpperCase())
+}
 
 /**
  *
@@ -72,7 +74,9 @@
  * the numbers multiplied by 2
  */
 
-// ...
+const doubleTrouble = numbers => {
+  return numbers.map(number => number * 2)
+}
 
 /*
  * Define a function stringyIndexes() that takes an array of
@@ -80,14 +84,23 @@
  * suffixed with " is at index X" where X is the index of the element
  */
 
-// ...
+const stringyIndexes = strings => {
+  return strings.map((string, index) => {
+    return string + ' is at index ' + index
+  })
+}
 
 /*
  * Define a function onlyTheEvenSurvive that accepts an array of
  * numbers and returns only the elements that are even
  */
 
-// ...
+const onlyTheEvenSurvive = numbers => {
+  return numbers.filter(evenNumber => {
+    evenNumber = evenNumber % 2 === 0
+    return evenNumber
+  })
+}
 
 /*
  * Define a function onlyTheEvenIndexedSurvive that accepts an array of
