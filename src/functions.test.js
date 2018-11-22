@@ -107,7 +107,12 @@ const onlyTheEvenSurvive = numbers => {
  * numbers and returns only the elements at indexes that are even
  */
 
-// ...
+const onlyTheEvenIndexedSurvive = array => {
+  return array.filter((evenIndex, index) => {
+    index = index % 2 === 0
+    return index
+  })
+}
 
 /*
  * Define a function bestMoviesOfTheYear that accepts an array of
@@ -123,7 +128,14 @@ const onlyTheEvenSurvive = numbers => {
  * }
  */
 
-// ...
+const bestMoviesOfTheYear = (movieObjectArray, releaseYear) => {
+  let filteredMovies = movieObjectArray.filter(movieObject => {
+    return movieObject.year === releaseYear && movieObject.score > 90
+  })
+  return filteredMovies.map(movie => {
+    return movie.name
+  })
+}
 
 /*
  * Define a function everyoneIsOdd that accepts an array of
@@ -131,7 +143,11 @@ const onlyTheEvenSurvive = numbers => {
  * odd.
  */
 
-// ...
+const everyoneIsOdd = array => {
+  return array.every(number => {
+    return number % 2 === 1
+  })
+}
 
 /*
  * Define a function findTheNeedle that accepts an array of
@@ -139,7 +155,12 @@ const onlyTheEvenSurvive = numbers => {
  * `needle` inside
  */
 
-// ...
+const findTheNeedle = array => {
+  let findNeedle = array.filter(string => {
+    return string.includes('needle')
+  })
+  return findNeedle[0]
+}
 
 /*
  * Define a function findTheNeedleIndex that accepts an array of
@@ -147,7 +168,11 @@ const onlyTheEvenSurvive = numbers => {
  *  the word `needle` inside
  */
 
-// ...
+const findTheNeedleIndex = needleArray => {
+  return needleArray.findIndex(needle => {
+    return needle.includes('needle')
+  })
+}
 
 /*
  * Define a function someoneToLove that accepts an array of
@@ -155,7 +180,11 @@ const onlyTheEvenSurvive = numbers => {
  * four characters long
  */
 
-// ...
+const someoneToLove = loveArray => {
+  return loveArray.some(love => {
+    return love.length === 4
+  })
+}
 
 /*
  * Define a function mapYourself that accepts an array of
